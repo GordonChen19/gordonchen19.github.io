@@ -7,11 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ThisIsGordonChen</title>
 
-  <!--map
-    - favicon
-  -->
-  <link rel="icon" href="./assets/images/person-circle-outline.svg" type="image/svg+xml">
-
 
   <!--
     - custom css link
@@ -49,7 +44,7 @@
         <div class="info-content">
           <h1 class="name" title="Gordon Chen">Gordon Chen</h1>
 
-          <p class="title">Research Intern @ A*STAR | Computer Science PhD @ NTU</p>
+          <p class="title">PhD Student @ MMLab NTU</p>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
@@ -99,16 +94,31 @@
           <li class="contact-item">
 
             <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
+              <ion-icon name="logo-github"></ion-icon>
             </div>
 
             <div class="contact-info">
-              <p class="contact-title">Phone</p>
+              <p class="contact-title">Github </p>
 
-              <a href="tel:+6584380846" class="contact-link">+65 84380846</a>
+              <a href="https://github.com/GordonChen19" class="contact-link" target="_blank">View Profile</a>
             </div>
 
           </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="school-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Google Scholar </p>
+
+              <a href="https://github.com/GordonChen19" class="contact-link" target="_blank">View Profile</a>
+            </div>
+
+          </li>
+
 
           <li class="contact-item">
 
@@ -152,7 +162,7 @@
         <ul class="navbar-list">
 
           <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About Me</button>
+            <button class="navbar-link  active" data-nav-link>Introduction</button>
           </li>
 
           <li class="navbar-item">
@@ -164,7 +174,7 @@
           </li> -->
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Papers and Projects</button>
+            <button class="navbar-link" data-nav-link>Publications</button>
           </li>
 
           <!-- <li class="navbar-item">
@@ -187,23 +197,25 @@
         - #ABOUT
       -->
 
-      <article class="about me  active" data-page="about me">
+      <article class="introduction  active" data-page="introduction">
 
         <header>
-          <h2 class="h2 article-title">About me</h2>
+          <h2 class="h2 article-title">Gordon Chen</h2>
         </header>
 
         <section class="about-text">
-          <p>
-            Hello, I'm Gordon! I was born in New Zealand and am currently studying in Singapore.
-            I'm now a Computer Science PhD student at Nanyang Technological University. 
-            I am incredibly passionate about exploring true Artificial Intelligence to solve real-world problems.
-            My research interests are in neural generation.
+         <p>
+            Gordon Chen is a Ph.D. student at the <a href="https://www.mmlab-ntu.com" target="_blank">Multimedia Lab (MMLab)</a> at <a href="https://www.ntu.edu.sg" target="_blank">NTU</a>, supervised by 
+            <a href="https://liuziwei7.github.io/team.html" target="_blank">Prof. Liu Ziwei</a>. 
+            Gordon is broadly interested in computer vision and works with image and video generation and manipulation.
+            He is awarded the <a href="https://www.ntu.edu.sg/admissions/graduate/financialmatters/scholarships/npgs">Nanyang President's Graduate Scholarship</a>.
           </p>
 
-
+          <p>
+            Gordon received his Bachelor's degree in Mathematics and Computer Science (Highest Distinction) in 2025 from NTU.
+            During his Bachelor's, he was inducted as a <a href="https://www.ntu.edu.sg/engineering/admissions/ug/allprogrammes/research" target="_blank">President's Research Scholar (Distinction)</a>, received the <a href="https://undergraduateawards.com/winners/highly-commended-2024" target="_blank">Global Undergraduate Award (Highly Commended Award)</a> and the <a href="https://www.ntu.edu.sg/spms/about-us/awards/student-awards#spms-undergrad-award" target="_blank">Outstanding Undergraduate Award (Achievement)</a>.
+          </p>
         </section>
-
 
         <!--
           - service
@@ -211,23 +223,23 @@
 
         <section class="service">
 
-          <h3 class="h3 service-title">What i'm doing</h3>
+          <h3 class="h3 service-title">Research Interests</h3>
 
           <ul class="service-list">
 
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg
+                <img src="./assets/images/icon-photo.svg
                 " alt="design icon" width="40">
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Learning</h4>
+                <h4 class="h4 service-item-title">Image & Video Manipulation</h4>
 
-                <p class="service-item-text">
+                <!-- <p class="service-item-text">
                   Taking Machine Learning, Advanced Topics in Algorithms, Stochastic Processes and Operating Systems this semester.
-                </p>
+                </p> -->
               </div>
 
             </li>
@@ -239,11 +251,11 @@
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Research @ A*STAR</h4>
-
+                <h4 class="h4 service-item-title">Video-driven World Models</h4>
+<!-- 
                 <p class="service-item-text">
                   Text-conditioned non-rigid image editing
-                </p>
+                </p> -->
               </div>
 
             </li>
@@ -252,6 +264,16 @@
           </ul>
 
         </section>
+
+<section class="news-section">
+  <h3 class="h3 section-title">News</h3>
+  <div class="news-box">
+    <ul class="news-list">
+      <li>[2025-05] <a href="https://gordonchen19.github.io/STENCIL.github.io/" target="_blank">STENCIL</a> accepted to <a href="https://2025.ieeeicip.org" target="_blank">ICIP 2025</a></li>
+
+    </ul>
+  </div>
+</section>
 
         <!--
           - testimonials modal
@@ -294,57 +316,6 @@
         <header>
           <h2 class="h2 article-title">Resume</h2>
         </header>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Education</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Nanyang Technological University, Singapore (2025 - Present)</h4>
-
-              <span>Nanyang President's Graduate Scholar</span>
-
-              <p class="timeline-text">
-                (PhD) Computer Science
-              </p>
-
-            </li>
-
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Nanyang Technological University, Singapore (2021 - 2025)</h4>
-
-              <span>First Class Honours (4.71/5.00)</span>
-
-              <p class="timeline-text">
-                (BS) Mathematics and Computer Science with Specialization in Financial Modelling
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Australian International School, Hong Kong (2013-2020)</h4>
-
-              <span>International Baccalaureate (43/45)</span>
-
-
-
-            </li>
-
-          </ol>
-
-        </section>
 
         <section class="timeline">
 
@@ -404,13 +375,6 @@
   
             </li>
 
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Full-Stack Developer @ Solomon Learning Group</h4>
-
-              <span>2023 (3 Months)</span>
-
-            </li>
 
             <li class="timeline-item">
 
@@ -421,24 +385,12 @@
             </li>
 
 
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Fintech Intern @ ASTRI </h4>
-
-              <span>2019 (2 Months)</span>
-
-            </li>
-
 
           </ol>
 
         </section>
 
         <br>
-        <header>
-          <h2 class="h2 article-title">Achievements</h2>
-        </header>
-
 
         <section class="timeline">
 
@@ -447,10 +399,18 @@
               <ion-icon name="book-outline"></ion-icon>
             </div>
 
-            <h3 class="h3">Academia</h3>
+            <h3 class="h3">Awards</h3>
           </div>
 
           <ol class="timeline-list">
+
+             <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title" >Oustanding Undergraduate Award (Achievement)</h4>
+
+              <span>Nanyang Technological University</span>
+
+            </li>
 
             <li class="timeline-item">
 
@@ -492,22 +452,6 @@
 
             </li>
 
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">School Prefect and House Captain</h4>
-
-              <span>Australian International School</span>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Duke of Edinburgh</h4>
-
-              <span>Hong Kong Awards for Young People</span>
-
-            </li>
-
 
             <li class="timeline-item">
 
@@ -520,53 +464,6 @@
 
         </section>
 
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Music</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Licentiate in Music Performance (Level 6 Diploma)</h4>
-
-              <span>Trinity College, London</span>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Grade 8 Violin Performance Distinction</h4>
-
-              <span>ABRSM</span>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Grade 5 Violin Performance Distinction</h4>
-
-              <span>ABRSM</span>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Grade 5 Music Theory Distinction</h4>
-
-              <span>ABRSM</span>
-
-            </li>
-
-          </ol>
-        
-        </section>
 
         <br>
 
@@ -577,7 +474,7 @@
         - #PORTFOLIO
       -->
 
-      <article class="projects" data-page="papers and projects">
+      <article class="projects" data-page="publications">
 
         <header>
           <h2 class="h2 article-title">Projects</h2>
@@ -592,11 +489,11 @@
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Machine Learning and Deep Learning</button>
+              <button data-filter-btn>Image Generation</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Papers</button>
+              <button data-filter-btn>Video-Driven World Models</button>
             </li>
 
             <li class="filter-item">
@@ -624,11 +521,11 @@
               </li>
 
               <li class="select-item">
-                <button data-select-item>Machine Learning and Deep Learning</button>
+                <button data-select-item>Image Generation</button>
               </li>
 
               <li class="select-item">
-                <button data-select-item>Papers</button>
+                <button data-select-item>Video-Driven World Models</button>
               </li>
 
               <li class="select-item">
@@ -641,238 +538,23 @@
 
           <ul class="project-list">
 
-            <li class="project-item  active" data-filter-item data-category="papers">
-              <a href="https://drpress.org/ojs/index.php/HSET/article/view/18406" target="_blank" >
+          
+            <li class="project-item active" data-filter-item data-category="image generation">
+              <a href="https://gordonchen19.github.io/STENCIL.github.io/" target="_blank">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/Projects/MCI.png" alt="task manager" loading="lazy">
+                  <video autoplay muted loop playsinline preload="metadata" class="project-video">
+                    <source src="./assets/images/Projects/Presentation.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
                 </figure>
 
-                <h3 class="project-title">Prediction of Mild Cognitive Impairment to Alzheimer’s Disease Conversion via Machine Learning</h3>
-
-                <p class="project-category">5th International Conference on Computer Science and Intelligent Communication (CSCI 2023)</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="papers">
-              <a href="https://github.com/GordonChen19/Filter-Bank-Common-Spatial-Pattern-Channel-Selection/blob/main/Paper.pdf" target="_blank">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/Projects/BCI.png" alt="arrival" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Functional Connectivity for Channel Selection in Brain-Computer Interface</h3>
-
-                <p class="project-category">Proceedings of the URECA@NTU 2022-2023</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="others">
-              <a href="https://github.com/GordonChen19/Solomon-Personality-Webpage" target="_blank">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/Projects/Solomon.png" alt="Solomon" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Online Personality Test</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="others">
-              <a href="https://github.com/GordonChen19/FindMyCollege"  target="_blank">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/Projects/FindMyCollege.png" alt="FindMyCollege" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">FindMyCollege: University Course Recommendation System</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="machine learning and deep learning">
-              <a href="https://github.com/GordonChen19/Sophia-RAG-Chatbot" target="_blank">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/Projects/Sophia.png" alt="arrival" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Sophia: Retrieval Augmented Generation Chatbot</h3>
-
-                <p class="project-category">Machine Learning and Deep Learning</p>
-
-              </a>
-            </li>
-
-
-            <li class="project-item  active" data-filter-item data-category="machine learning and deep learning">
-              <a href="https://github.com/GordonChen19/CodeLab" target="_blank">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/Projects/CodeLab.png" alt="metaspark" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">CodeLab: Computer Science Educational Assistant powered by Large Language Models</h3>
-
-                <p class="project-category">Machine Learning and Deep Learning</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="machine learning and deep learning">
-              <a href="https://github.com/GordonChen19/Sales-Forecast-via-Machine-Learning" target="_blank">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/Projects/Sales.png" alt="metaspark" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Sales Forecast via XGBoost, Arima, Prophet, Regression Analysis and Neural Networks</h3>
-
-                <p class="project-category">Machine Learning and Deep Learning</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="machine learning and deep learning">
-              <a href="https://github.com/GordonChen19/Age-and-Gender-Classification-via-Deep-Transfer-Learning" target="_blank">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/Projects/vgg16.png" alt="metaspark" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Age and Gender Classification via Deep Transfer Learning</h3>
-
-                <p class="project-category">Machine Learning and Deep Learning</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="machine learning and deep learning">
-              <a href="https://github.com/GordonChen19/Sign-Language-to-Speech-via-Machine-Learning" target="_blank">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/Projects/Sign.png" alt="metaspark" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Fingerspelling to Speech Conversion</h3>
-
-                <p class="project-category">Machine Learning and Deep Learning</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="papers">
-              <a href="https://github.com/GordonChen19/Traffic-Forecast-via-Regression-Analysis/blob/main/Regression%20Analysis.pdf" target="_blank">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/Projects/Traffic.png" alt="metaspark" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Traffic Forecast via Regression Analysis</h3>
-
-                <p class="project-category">Papers</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="papers">
-              <a href="https://github.com/GordonChen19/NER-Tagging-and-Question-Classification-via-NLP" target="_blank">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/Projects/NLP.png" alt="metaspark" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">NER Tagging and Sentence Level Categorization via Embeddings and LSTM</h3>
-
-                <p class="project-category">Papers</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="papers">
-              <a href="https://github.com/GordonChen19/Sales-Forecast-via-Machine-Learning/blob/main/Paper.pdf" target="_blank">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/Projects/SalesPaper.png" alt="metaspark" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Sales Forecast via XGBoost, Arima, Prophet, Regression Analysis and Neural Networks</h3>
-
-                <p class="project-category">Papers</p>
-
-              </a>
-            </li>
-
-
-            <li class="project-item  active" data-filter-item data-category="papers" >
-              <a href="https://github.com/GordonChen19/Age-and-Gender-Classification-via-Deep-Transfer-Learning/blob/main/Report.pdf" target="_blank">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/Projects/AgeGender.png" alt="task manager" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Age and Gender Classification via Deep Learning and Transfer Learning</h3>
-
-                <p class="project-category">Paper</p>
+                <h3 class="project-title">STENCIL: Subject-Driven Generation with Context Guidance</h3>
+                <p class="project-category">International Conference on Image Processing (ICIP 2025)</p>
 
               </a>
             </li>
