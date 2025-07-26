@@ -108,12 +108,15 @@ for (let i = 0; i < navigationLinks.length; i++) {
 const root = document.documentElement;
 const themeToggle = document.getElementById('theme-toggle');
 const storedTheme = localStorage.getItem('theme');
+const themeText = document.querySelector('.theme-text');
 
 // Apply stored theme on load
 function applyTheme(theme) {
   root.setAttribute('data-theme', theme);
+  themeText.textContent = theme === 'dark' ? 'Dark Mode' : 'Light Mode';
   document.body.classList.toggle('dark-theme', theme === 'dark');
   document.body.classList.toggle('light-theme', theme === 'light');
+
 }
 
 // Initialize theme (default to dark if not set)
