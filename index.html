@@ -8,7 +8,7 @@
 
   <meta name="google-site-verification" content="7MyIRlo_jHeVnSz76jIh5yFoJF2IE1tV1R5GiYPZ4-I" />
 
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link id="theme-stylesheet" rel="stylesheet" href="./assets/css/style.css">
 
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,7 +39,7 @@
         <div class="info-content">
           <h1 class="name" title="Gordon Chen">Gordon Chen</h1>
 
-          <p class="title">PhD Student @ MMLab, NTU</p>
+          <p class="title">Ph.D. Student @ MMLab, NTU</p>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
@@ -65,7 +65,7 @@
             <div class="contact-info">
               <p class="contact-title">Email</p>
 
-              <a class="contact-link">chengordon8@gmail.com</a>
+              <a class="contact-link">CHEN2008@e.ntu.edu.sg</a>
             </div>
 
           </li>
@@ -131,8 +131,6 @@
 
         </ul>
 
-        <div class="separator"></div>
-
 
       </div>
 
@@ -152,7 +150,9 @@
         - #NAVBAR
       -->
 
+
       <nav class="navbar">
+
 
         <ul class="navbar-list">
 
@@ -168,6 +168,15 @@
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Publications</button>
           </li>
+
+
+            
+          <li class="navbar-item">
+            <div class = "theme-toggle" id="theme-toggle">
+            </div>
+          </li>
+         
+
 
 
 
@@ -256,31 +265,6 @@
   </div>
 </section>
 
-        <!--
-          - testimonials modal
-        -->
-
-        <div class="modal-container" data-modal-container>
-
-          <div class="overlay" data-overlay></div>
-
-          <section class="testimonials-modal">
-
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-
-            <div class="modal-img-wrapper">
-              <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
-              </figure>
-
-              <img src="./assets/images/icon-quote.svg" alt="quote icon">
-            </div>
-
-          </section>
-
-        </div>
 
       </article>
 
@@ -516,7 +500,7 @@
 
             <button class="filter-select" data-select>
 
-              <div class="select-value" data-selecct-value>Select category</div>
+              <div class="select-value" data-selecct-value>Filter</div>
 
               <div class="select-icon">
                 <ion-icon name="chevron-down"></ion-icon>
@@ -590,6 +574,9 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+
 
 </body>
 
