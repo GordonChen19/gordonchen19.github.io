@@ -477,6 +477,7 @@ main {
   justify-content: center;
   align-items: center;
   padding: 0 10px;
+  min-height: 80px;
 }
 
 .navbar-link {
@@ -734,6 +735,11 @@ main {
 }
 
 .select-item button:hover { --text-box: var(--text-field-hover) }
+
+.projects{
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
 
 .project-list {
   display: grid;
@@ -1453,6 +1459,7 @@ main {
 
 .news-section {
   margin-top: 30px;
+  margin-bottom: 50px;
 }
 
 .about-text {
@@ -1563,4 +1570,22 @@ body.dark-theme .theme-toggle {
 
 body.dark-theme .theme-toggle::before {
   transform: translateX(30px);
+}
+
+.theme-toggle-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between text and toggle */
+}
+
+.theme-text {
+  color: var(--text-color); /* Match your navbar text color */
+  font-size: 14px; /* Adjust as needed */
+  font-weight: 500;
+  margin-right: 5px;
+}
+
+/* Adjust toggle size if needed */
+.theme-toggle {
+  margin: 0; /* Remove any default margins */
 }
