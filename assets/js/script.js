@@ -114,8 +114,9 @@ const themeText = document.querySelector('.theme-text');
 function applyTheme(theme) {
   root.setAttribute('data-theme', theme);
   themeText.textContent = theme === 'dark' ? 'Dark Mode' : 'Light Mode';
-  document.body.classList.toggle('dark-theme', theme === 'dark');
   document.body.classList.toggle('light-theme', theme === 'light');
+  document.body.classList.toggle('dark-theme', theme === 'dark');
+  
 
 }
 
