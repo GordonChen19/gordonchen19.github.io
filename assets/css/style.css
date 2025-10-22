@@ -97,7 +97,7 @@
 }
 
 [data-theme="light"]{
-  --yellow-highlight:#faa700;
+  --yellow-highlight:#ff9d00;
   --text-color: hsl(0, 0%, 0%);
   --text-hover: hsla(0, 2%, 39%, 0.7);
   --text-field-hover:  hsla(0, 2%, 57%, 0.7);
@@ -1586,3 +1586,60 @@ body.dark-theme .theme-toggle::before {
 .theme-toggle {
   margin: 0; /* Remove any default margins */
 }
+
+
+/* Research Internships */
+.experience-carousel {
+  margin-top: 50px;
+}
+
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-top: 30px;
+}
+
+.carousel-track {
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+  animation: scroll-left 40s linear infinite;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  text-align: center;
+  min-width: 160px;
+}
+
+.carousel-item img {
+  height: 60px; /* consistent height for all logos */
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0.95);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+
+.carousel-item p {
+  color: var(--text-color);
+  margin-top: 8px;
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+.carousel-item span {
+  color: var(--yellow-highlight);
+  font-weight: 500;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
