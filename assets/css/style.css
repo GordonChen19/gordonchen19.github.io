@@ -1591,6 +1591,7 @@ body.dark-theme .theme-toggle::before {
 /* Research Internships */
 .experience-carousel {
   margin-top: 50px;
+  margin-bottom: 20px;
 }
 
 .carousel {
