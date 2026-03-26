@@ -1,137 +1,202 @@
 'use strict';
 
-// element toggle function
-const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
+const toggleActive = (element) => {
+  element.classList.toggle('active');
+};
 
-// sidebar variables
-const sidebar = document.querySelector("[data-sidebar]");
-const sidebarBtn = document.querySelector("[data-sidebar-btn]");
+const sidebar = document.querySelector('[data-sidebar]');
+const sidebarBtn = document.querySelector('[data-sidebar-btn]');
 
-// sidebar toggle functionality for mobile
-sidebarBtn.addEventListener("click", function () { 
-  elementToggleFunc(sidebar); 
+if (sidebar && sidebarBtn) {
+  const syncSidebar = () => {
+    if (window.innerWidth >= 992) {
+      sidebar.classList.remove('active');
+    }
+  };
+
+  sidebarBtn.addEventListener('click', () => {
+    toggleActive(sidebar);
+  });
+
+  window.addEventListener('resize', syncSidebar);
+  syncSidebar();
+}
+
+const select = document.querySelector('[data-select]');
+const selectItems = document.querySelectorAll('[data-select-item]');
+const selectValue = document.querySelector('[data-select-value]');
+const filterButtons = document.querySelectorAll('[data-filter-btn]');
+const filterItems = document.querySelectorAll('[data-filter-item]');
+
+const filterProjects = (selectedValue) => {
+  filterItems.forEach((item) => {
+    const matches =
+      selectedValue === 'all' || selectedValue === item.dataset.category;
+    item.classList.toggle('active', matches);
+  });
+};
+
+if (select && selectValue) {
+  select.addEventListener('click', () => {
+    toggleActive(select);
+  });
+}
+
+selectItems.forEach((item) => {
+  item.addEventListener('click', () => {
+    const selectedValue = item.innerText.toLowerCase();
+    if (selectValue) {
+      selectValue.innerText = item.innerText;
+    }
+    select?.classList.remove('active');
+    filterProjects(selectedValue);
+  });
 });
 
-// Function to check screen size and close sidebar if needed
-function handleSidebarOnResize() {
-  // Adjust 992px to match your desktop breakpoint
-  if (window.innerWidth >= 992) {
-    sidebar.classList.remove("active");
-  }
-}
+let activeFilterButton = filterButtons[0];
 
-// Add resize event listener
-window.addEventListener('resize', handleSidebarOnResize);
-
-// Also check on initial load
-handleSidebarOnResize();
-
-// Rest of your select code remains the same...
-const select = document.querySelector("[data-select]");
-const selectItems = document.querySelectorAll("[data-select-item]");
-const selectValue = document.querySelector("[data-selecct-value]");
-const filterBtn = document.querySelectorAll("[data-filter-btn]");
-
-select.addEventListener("click", function () { elementToggleFunc(this); });
-
-// add event in all select items
-for (let i = 0; i < selectItems.length; i++) {
-  selectItems[i].addEventListener("click", function () {
-    let selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
-    elementToggleFunc(select);
-    filterFunc(selectedValue);
-  });
-}
-
-// filter variables
-const filterItems = document.querySelectorAll("[data-filter-item]");
-
-const filterFunc = function (selectedValue) {
-
-  for (let i = 0; i < filterItems.length; i++) {
-
-    if (selectedValue === "all") {
-      filterItems[i].classList.add("active");
-    } else if (selectedValue === filterItems[i].dataset.category) {
-      filterItems[i].classList.add("active");
-    } else {
-      filterItems[i].classList.remove("active");
+filterButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const selectedValue = button.innerText.toLowerCase();
+    if (selectValue) {
+      selectValue.innerText = button.innerText;
     }
+    filterProjects(selectedValue);
 
-  }
-
-}
-
-// add event in all filter button items for large screen
-let lastClickedBtn = filterBtn[0];
-
-for (let i = 0; i < filterBtn.length; i++) {
-
-  filterBtn[i].addEventListener("click", function () {
-
-    let selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
-    filterFunc(selectedValue);
-
-    lastClickedBtn.classList.remove("active");
-    this.classList.add("active");
-    lastClickedBtn = this;
-
+    activeFilterButton?.classList.remove('active');
+    button.classList.add('active');
+    activeFilterButton = button;
   });
-
-}
-
-// page navigation variables
-const navigationLinks = document.querySelectorAll("[data-nav-link]");
-const pages = document.querySelectorAll("[data-page]");
-
-// add event to all nav link
-for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function () {
-
-    for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-        pages[i].classList.add("active");
-        navigationLinks[i].classList.add("active");
-        window.scrollTo(0, 0);
-      } else {
-        pages[i].classList.remove("active");
-        navigationLinks[i].classList.remove("active");
-      }
-    }
-
-  });
-}
-
-
-const root = document.documentElement;
-const themeToggle = document.getElementById('theme-toggle');
-const storedTheme = localStorage.getItem('theme');
-const themeText = document.querySelector('.theme-text');
-
-// Apply stored theme on load
-function applyTheme(theme) {
-  root.setAttribute('data-theme', theme);
-  themeText.textContent = theme === 'dark' ? 'Dark Mode' : 'Light Mode';
-  document.body.classList.toggle('light-theme', theme === 'light');
-  document.body.classList.toggle('dark-theme', theme === 'dark');
-  
-
-}
-
-// Initialize theme (default to dark if not set)
-if (storedTheme) {
-  applyTheme(storedTheme);
-} else {
-  applyTheme('dark'); // Default theme
-}
-
-// Toggle logic
-themeToggle.addEventListener('click', () => {
-  const current = root.getAttribute('data-theme');
-  const next = current === 'dark' ? 'light' : 'dark';
-  
-  applyTheme(next); // Update theme
-  localStorage.setItem('theme', next); // Save to localStorage
 });
+
+const activeButtonLabel = activeFilterButton?.innerText.toLowerCase();
+if (activeButtonLabel) {
+  filterProjects(activeButtonLabel);
+}
+
+const wrapOffset = (position, loopWidth) => {
+  if (!loopWidth) {
+    return position;
+  }
+
+  while (position <= -loopWidth) {
+    position += loopWidth;
+  }
+
+  while (position > 0) {
+    position -= loopWidth;
+  }
+
+  return position;
+};
+
+const initializeCarousel = (carousel) => {
+  const track = carousel.querySelector('.carousel-track');
+  if (!track) {
+    return;
+  }
+
+  const autoScrollSpeed = 60;
+  const images = track.querySelectorAll('img');
+
+  let loopWidth = 0;
+  let position = 0;
+  let previousFrameTime = 0;
+  let isDragging = false;
+  let dragStartX = 0;
+  let dragStartPosition = 0;
+
+  const applyPosition = () => {
+    position = wrapOffset(position, loopWidth);
+    track.style.transform = `translate3d(${position}px, 0, 0)`;
+  };
+
+  const refreshMeasurements = () => {
+    loopWidth = track.scrollWidth / 2;
+    applyPosition();
+  };
+
+  const tick = (timestamp) => {
+    if (!previousFrameTime) {
+      previousFrameTime = timestamp;
+    }
+
+    const deltaTime = timestamp - previousFrameTime;
+    previousFrameTime = timestamp;
+
+    if (!isDragging && loopWidth > 0) {
+      position -= (autoScrollSpeed * deltaTime) / 1000;
+      applyPosition();
+    }
+
+    window.requestAnimationFrame(tick);
+  };
+
+  const stopDragging = (pointerId) => {
+    if (!isDragging) {
+      return;
+    }
+
+    isDragging = false;
+    carousel.classList.remove('is-dragging');
+
+    if (
+      pointerId !== undefined &&
+      carousel.hasPointerCapture &&
+      carousel.hasPointerCapture(pointerId)
+    ) {
+      carousel.releasePointerCapture(pointerId);
+    }
+
+    previousFrameTime = 0;
+  };
+
+  carousel.addEventListener('pointerdown', (event) => {
+    if (event.pointerType === 'mouse' && event.button !== 0) {
+      return;
+    }
+
+    isDragging = true;
+    dragStartX = event.clientX;
+    dragStartPosition = position;
+    previousFrameTime = 0;
+
+    carousel.classList.add('is-dragging');
+    carousel.setPointerCapture?.(event.pointerId);
+    event.preventDefault();
+  });
+
+  carousel.addEventListener('pointermove', (event) => {
+    if (!isDragging) {
+      return;
+    }
+
+    position = dragStartPosition + (event.clientX - dragStartX);
+    applyPosition();
+  });
+
+  carousel.addEventListener('pointerup', (event) => {
+    stopDragging(event.pointerId);
+  });
+
+  carousel.addEventListener('pointercancel', (event) => {
+    stopDragging(event.pointerId);
+  });
+
+  carousel.addEventListener('lostpointercapture', () => {
+    stopDragging();
+  });
+
+  images.forEach((image) => {
+    image.draggable = false;
+    image.addEventListener('load', refreshMeasurements, { once: true });
+  });
+
+  window.addEventListener('load', refreshMeasurements);
+  window.addEventListener('resize', refreshMeasurements);
+
+  refreshMeasurements();
+  window.requestAnimationFrame(tick);
+};
+
+document.querySelectorAll('.carousel').forEach(initializeCarousel);

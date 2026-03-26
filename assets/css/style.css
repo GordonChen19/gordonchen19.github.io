@@ -1,4 +1,3 @@
-
 /*-----------------------------------*\
   #CUSTOM PROPERTY
 \*-----------------------------------*/
@@ -63,67 +62,29 @@
 
   --transition-1: 0.25s ease;
   --transition-2: 0.5s ease-in-out;
-
-}
-
-[data-theme="dark"]{
-  --yellow-highlight:#ffcc67;
-  --text-color: rgb(219, 212, 212);
-  --text-hover: hsla(0, 0%, 100%, 0.49);
-  --text-field-hover:  hsl(240, 2%, 20%);
-  --outline: hsl(240, 1%, 17%);
-  --background: hsl(0, 0%, 7%);
-  --icon: hsl(240, 2%, 13%);
-  --text-box: hsl(240, 2%, 12%);
-  --border-gradient: linear-gradient(
-    to bottom right, 
-    hsl(0, 0%, 25%) 0%, 
-    hsla(0, 0%, 25%, 0) 50%
-  );
-  --box-gradient: linear-gradient(
-    to bottom right, 
-    hsla(240, 1%, 18%, 0.251) 0%, 
-    hsla(240, 2%, 11%, 0) 100%
-  ), hsl(240, 2%, 13%);
-  --contacts-button: linear-gradient(
-    135deg, 
-    hsla(45, 100%, 71%, 0.251) 0%, 
-    hsla(35, 100%, 68%, 0) 59.86%
-  ), hsl(240, 2%, 13%);
-  --navbar: hsla(240, 1%, 17%, 0.75);
-
-
-
-}
-
-[data-theme="light"]{
-  --yellow-highlight:#ff9d00;
+  --yellow-highlight: #ff9d00;
   --text-color: hsl(0, 0%, 0%);
   --text-hover: hsla(0, 2%, 39%, 0.7);
-  --text-field-hover:  hsla(0, 2%, 57%, 0.7);
+  --text-field-hover: hsla(0, 2%, 57%, 0.7);
   --outline: hsl(240, 13%, 89%);
   --background: hsl(0, 0%, 98%);
   --icon: hsl(240, 8%, 95%);
   --text-box: hsl(0, 1%, 100%);
   --border-gradient: linear-gradient(
-    to bottom right, 
-    hsl(0, 2%, 100%) 0%, 
+    to bottom right,
+    hsl(0, 2%, 100%) 0%,
     hsla(0, 2%, 100%, 0) 50%
   );
   --box-gradient: linear-gradient(
-    to bottom right, 
-    hsla(0, 1%, 100%, 0.251) 0%, 
+    to bottom right,
+    hsla(0, 1%, 100%, 0.251) 0%,
     hsla(0, 1%, 100%, 0) 100%
   ), hsl(0, 1%, 100%);
-    --contacts-button: linear-gradient(
-    135deg, 
-    hsla(45, 100%, 71%, 0.251) 0%, 
+  --contacts-button: linear-gradient(
+    135deg,
+    hsla(45, 100%, 71%, 0.251) 0%,
     hsla(0, 2%, 100%, 0) 59.86%
   ), hsl(0, 2%, 100%);
-  --navbar: hsla(240, 1%, 17%, 0.484);
-
-  
-
 }
 
 
@@ -170,7 +131,10 @@ input, textarea {
 
 html { font-family: var(--ff-poppins); }
 
-body { background: var(--background); }
+body {
+  background: var(--background);
+  color: var(--text-color);
+}
 
 
 
@@ -321,7 +285,7 @@ article.active {
 
 main {
   margin: 15px 12px;
-  margin-bottom: 75px;
+  margin-bottom: 30px;
   min-width: 259px;
 }
 
@@ -452,46 +416,6 @@ main {
 }
 
 .contact-info address { font-style: normal; }
-
-
-/*-----------------------------------*\
-  #NAVBAR
-\*-----------------------------------*/
-
-.navbar {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  backdrop-filter: blur(15px);
-  box-shadow: var(--shadow-2);
-  z-index: 5;
-}
-
-.navbar-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 0 10px;
-  min-height: 50px;
-}
-
-.navbar-link {
-  color: var(--text-color);
-  font-size: var(--fs-8);
-  padding: 20px 7px;
-  transition: color var(--transition-1);
-}
-
-.navbar-link:hover,
-.navbar-link:focus { color: var(--text-hover); }
-
-.navbar-link.active { color: var(--yellow-highlight); }
-
-
-
-
 
 /*-----------------------------------*\
   #ABOUT
@@ -935,7 +859,7 @@ main {
 
   main {
     margin-top: 60px;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
   }
 
 
@@ -982,21 +906,6 @@ main {
     max-width: calc(100% - 64px);
     width: calc(100% - 64px);
   }
-
-
-
-  /**
-   * #NAVBAR
-   */
-
-  .navbar { border-radius: 20px 20px 0 0; }
-
-  .navbar-list { gap: 20px; }
-
-  .navbar-link { --fs-8: 16px; }
-
-  /* 14 */
-
 
 
   /**
@@ -1126,17 +1035,6 @@ main {
   }
 
 
-
-  /**
-   * NAVBAR
-   */
-
-  .navbar-link { --fs-8: 15px; } 
-  
-  /* 15 */
-
-
-
   /**
    * ABOUT
    */
@@ -1249,32 +1147,6 @@ main {
     margin: auto;
     transition: var(--transition-1);
   }
-
-
-
-  /**
-   * NAVBAR
-   */
-
-  .navbar {
-    position: absolute;
-    bottom: auto;
-    top: 0;
-    left: auto;
-    right: 0;
-    width: max-content;
-    border-radius: 0 20px;
-    padding: 0 20px;
-    box-shadow: none;
-  }
-
-  .navbar-list {
-    gap: 30px;
-    padding: 0 20px;
-  }
-
-  .navbar-link { font-weight: var(--fw-500); }
-
 
 
   /**
@@ -1510,84 +1382,6 @@ main {
 }
 
 
-/* Theme Toggle */
-.theme-toggle {
-  position: relative;
-  width: 60px;
-  height: 30px;
-  background-color: var(--text-color);
-  border-radius: 30px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.theme-toggle::before {
-  content: '';
-  position: absolute;
-  top: 3px;
-  left: 3px;
-  width: 24px;
-  height: 24px;
-  background-color: var(--yellow-highlight);
-  border-radius: 50%;
-  transition: transform 0.3s ease;
-}
-
-/* Sun icon (light mode) - positioned on the right (abstract circle with rays) */
-.theme-toggle::after {
-  position: absolute;
-  right: 6px;
-  left: auto;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  opacity: 0.8;
-  transition: all 0.3s ease;
-}
-
-/* Moon icon (dark mode) - positioned on the left */
-body.dark-theme .theme-toggle::after {
-  content: '';
-  left: 10px;
-  width: 16px;
-  height: 16px;
-  background: transparent;
-  border-radius: 50%;
-  box-shadow: 
-    inset 5px 0 0 var(--text-box), /* Creates the crescent shape */
-    -3px 0 0 1px var(--text-box);   /* Optional: Adds slight glow effect */
-  opacity: 0.9;
-}
-/* Dark mode slider position and colors */
-body.dark-theme .theme-toggle {
-  background-color: var(--yellow-highlight);
-}
-
-body.dark-theme .theme-toggle::before {
-  transform: translateX(30px);
-}
-
-.theme-toggle-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 8px; /* Space between text and toggle */
-}
-
-.theme-text {
-  color: var(--text-color); /* Match your navbar text color */
-  font-size: 14px; /* Adjust as needed */
-  font-weight: 500;
-  margin-right: 5px;
-}
-
-/* Adjust toggle size if needed */
-.theme-toggle {
-  margin: 0; /* Remove any default margins */
-}
-
-
 /* Research Internships */
 .experience-carousel {
   margin-top: 50px;
@@ -1599,20 +1393,29 @@ body.dark-theme .theme-toggle::before {
   overflow: hidden;
   position: relative;
   margin-top: 30px;
+  cursor: grab;
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.carousel.is-dragging {
+  cursor: grabbing;
 }
 
 .carousel-track {
   display: flex;
   align-items: flex-start;
   gap: 60px;
-  animation: scroll-left 40s linear infinite;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
 }
 
 .carousel-item {
   flex: 0 0 auto;
   text-align: center;
   min-width: 160px;
-  
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1624,6 +1427,7 @@ body.dark-theme .theme-toggle::before {
   width: auto;
   object-fit: contain;
   filter: brightness(0.95);
+  -webkit-user-drag: none;
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
@@ -1639,13 +1443,3 @@ body.dark-theme .theme-toggle::before {
   color: var(--yellow-highlight);
   font-weight: 500;
 }
-
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
