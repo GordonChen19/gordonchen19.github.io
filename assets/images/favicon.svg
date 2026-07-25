@@ -1,15 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="GC">
   <rect width="64" height="64" rx="18" fill="#ff9d00"/>
-  <circle cx="53" cy="11" r="14" fill="#ffd166" opacity="0.72"/>
-  <circle cx="9" cy="57" r="18" fill="#e88100" opacity="0.66"/>
   <g
     fill="#ffffff"
     font-family="Arial, Helvetica, sans-serif"
-    font-size="22"
+    font-size="28"
     font-weight="700"
     text-anchor="middle"
   >
-    <text x="20" y="40">G</text>
-    <text x="44" y="40">C</text>
+    <text x="19" y="42">G</text>
+    <text x="45" y="42">C</text>
   </g>
 </svg>
