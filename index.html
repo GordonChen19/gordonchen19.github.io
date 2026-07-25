@@ -32,8 +32,9 @@
 
       <div class="sidebar-info">
 
-        <figure class="avatar-box">
-          <img src="./assets/images/profile-pic.jpeg" alt="GORDON CHEN" width="80">
+        <figure class="avatar-box" data-profile-rotator>
+          <img class="profile-photo is-active" src="./assets/images/Profile_Pictures/profile-pic-1.jpeg" alt="Gordon Chen" width="80">
+          <img class="profile-photo" src="./assets/images/Profile_Pictures/profile-pic-2.JPG" alt="" width="80" aria-hidden="true">
         </figure>
 
         <div class="info-content">
@@ -65,7 +66,7 @@
             <div class="contact-info">
               <p class="contact-title">Email</p>
 
-              <a class="contact-link">CHEN2008@e.ntu.edu.sg</a>
+              <a class="contact-link">chengordon8@gmail.com</a>
             </div>
 
           </li>
@@ -213,30 +214,68 @@
 
         </section> -->
 
-    <section class="news-section">
-      <h3 class="h3 section-title">News</h3>
-        <!-- <header>
-          <h2 class="h2 article-title">News</h2>
-        </header> -->
+    <section class="news-section" aria-labelledby="news-title">
+      <div class="section-heading">
+        <span class="section-eyebrow">Latest</span>
+        <h3 class="h3 section-title" id="news-title">News</h3>
+        <span class="section-heading-line" aria-hidden="true"></span>
+      </div>
       <div class="news-box">
         <ul class="news-list">
-          <li>[2026-06]  Receives Outstanding Teaching Assistant Award</li>
-          <li>[2026-04] <a href="https://eyeline-labs.github.io/VChain/" target="_blank">VChain</a> accepted to ACL Findings 2026</li>
-          <li>[2026-03] <a href="https://gordonchen19.github.io/Prompt-Relay/" target="_blank">Prompt Relay</a> integrated into <a href="https://github.com/Wan-Video/Wan2.2" target="_blank"> Wan's official repository</a></li>
-          <li>[2026-03] <a href="https://gordonchen19.github.io/Prompt-Relay/" target="_blank">Prompt Relay</a> accepted to <a href="https://cvpr26-j2a.github.io" target="_blank">CVPR Workshop 2026</a> (Generative AI for Movie-Grade Video Production)</li>
-          <li>[2025-10] <a href="https://eyeline-labs.github.io/VChain/" target="_blank">VChain</a> receives Outstanding Paper Award (Main Track) at ICCV 2025 <a href = "https://knowledgemr-workshop.github.io/" target="_blank">Multimodal Reasoning Workshop</a></li>
-          <li>[2025-08] <a href="https://eyeline-labs.github.io/VChain/" target="_blank">VChain</a> accepted to ICCV 2025 <a href = "https://knowledgemr-workshop.github.io/" target="_blank">Multimodal Reasoning Workshop</a> as Oral</li>
-          <li>[2025-07] <a href="https://gordonchen19.github.io/STENCIL/" target="_blank">STENCIL</a> receives IEEE SPS travel grant</li>
-          <li>[2025-05] <a href="https://gordonchen19.github.io/STENCIL/" target="_blank">STENCIL</a> accepted to <a href="https://2025.ieeeicip.org" target="_blank">ICIP 2025</a> as Spotlight Oral</li>
-
+          <li class="news-item is-featured" style="--item-index: 0">
+            <span class="news-marker" aria-hidden="true"></span>
+            <time datetime="2026-06">Jun ’26</time>
+            <p>Received the <strong>Outstanding Teaching Assistant Award</strong>.</p>
+          </li>
+          <li class="news-item" style="--item-index: 1">
+            <span class="news-marker" aria-hidden="true"></span>
+            <time datetime="2026-04">Apr ’26</time>
+            <p><a href="https://eyeline-labs.github.io/VChain/" target="_blank">VChain</a> accepted to ACL Findings 2026.</p>
+          </li>
+          <li class="news-item" style="--item-index: 2">
+            <span class="news-marker" aria-hidden="true"></span>
+            <time datetime="2026-03">Mar ’26</time>
+            <p><a href="https://gordonchen19.github.io/Prompt-Relay/" target="_blank">Prompt Relay</a> integrated into <a href="https://github.com/Wan-Video/Wan2.2" target="_blank">Wan’s official repository</a>.</p>
+          </li>
+          <li class="news-item" style="--item-index: 3">
+            <span class="news-marker" aria-hidden="true"></span>
+            <time datetime="2026-03">Mar ’26</time>
+            <p><a href="https://gordonchen19.github.io/Prompt-Relay/" target="_blank">Prompt Relay</a> accepted to the <a href="https://cvpr26-j2a.github.io" target="_blank">CVPR Workshop 2026</a> on Generative AI for Movie-Grade Video Production.</p>
+          </li>
+          <li class="news-item is-featured" style="--item-index: 4">
+            <span class="news-marker" aria-hidden="true"></span>
+            <time datetime="2025-10">Oct ’25</time>
+            <p><a href="https://eyeline-labs.github.io/VChain/" target="_blank">VChain</a> received the <strong>Outstanding Paper Award</strong> at the ICCV 2025 <a href="https://knowledgemr-workshop.github.io/" target="_blank">Multimodal Reasoning Workshop</a>.</p>
+          </li>
+          <li class="news-item" style="--item-index: 5">
+            <span class="news-marker" aria-hidden="true"></span>
+            <time datetime="2025-08">Aug ’25</time>
+            <p><a href="https://eyeline-labs.github.io/VChain/" target="_blank">VChain</a> accepted as an oral at the ICCV 2025 <a href="https://knowledgemr-workshop.github.io/" target="_blank">Multimodal Reasoning Workshop</a>.</p>
+          </li>
+          <li class="news-item" style="--item-index: 6">
+            <span class="news-marker" aria-hidden="true"></span>
+            <time datetime="2025-07">Jul ’25</time>
+            <p><a href="https://gordonchen19.github.io/STENCIL/" target="_blank">STENCIL</a> received an IEEE SPS travel grant.</p>
+          </li>
+          <li class="news-item" style="--item-index: 7">
+            <span class="news-marker" aria-hidden="true"></span>
+            <time datetime="2025-05">May ’25</time>
+            <p><a href="https://gordonchen19.github.io/STENCIL/" target="_blank">STENCIL</a> accepted to <a href="https://2025.ieeeicip.org" target="_blank">ICIP 2025</a> as a spotlight oral.</p>
+          </li>
         </ul>
       </div>
     </section>
       <!-- <header>
           <h2 class="h2 article-title">Projects</h2>
         </header> -->
-        <h3 class="h3 section-title">Projects</h3>
-        <section class="projects">
+        <div class="title-wrapper showcase-heading publications-heading">
+          <div class="icon-box">
+            <ion-icon name="document-text-outline"></ion-icon>
+          </div>
+
+          <h3 class="h3" id="publications-title">Selected Publications</h3>
+        </div>
+        <section class="projects" aria-labelledby="publications-title">
 
           <ul class="filter-list">
 
@@ -307,10 +346,13 @@
                     <source src="./assets/images/Projects/Presentation.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                   </video>
+
+                  <span class="project-venue" title="International Conference on Image Processing 2025">ICIP 2025</span>
+                  <span class="project-highlight">Spotlight Paper</span>
                 </figure>
 
                 <h3 class="project-title">STENCIL: Subject-Driven Generation with Context Guidance</h3>
-                <p class="project-category">International Conference on Image Processing (ICIP 2025)</p>
+                <p class="project-authors"><span class="project-author project-author--owner">Gordon Chen</span>, <span class="project-author">Ziqi Huang</span>, <span class="project-author">Cheston Tan</span>, <span class="project-author">Ziwei Liu</span></p>
 
               </a>
             </li>
@@ -324,10 +366,12 @@
                   </div>
 
                   <img src="./assets/images/Projects/VChain.gif" class=project-video alt="VChain">
+                  <span class="project-venue" title="Findings of the Association for Computational Linguistics 2026">ACL Findings 2026</span>
+                  <span class="project-highlight project-highlight--award">Outstanding Paper Award</span>
                 </figure>
 
                 <h3 class="project-title">VChain: Chain-of-Visual-Thought for Reasoning in Video Generation</h3>
-                <p class="project-category">ACL Findings 2026</p>
+                <p class="project-authors"><span class="project-author">Ziqi Huang</span>, <span class="project-author">Ning Yu</span>, <span class="project-author project-author--owner">Gordon Chen</span>, <span class="project-author">Haonan Qiu</span>, <span class="project-author">Paul Debevec</span>, <span class="project-author">Ziwei Liu</span></p>
 
               </a>
             </li>
@@ -341,13 +385,12 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                 
                   <img src="./assets/images/Projects/Prompt_Relay.gif" class=project-video alt="Prompt Relay">
-                  
+                  <span class="project-venue" title="CVPR Workshop 2026 — Generative AI for Movie-Grade Video Production">CVPR Workshop 2026</span>
                 </figure>
 
                 <h3 class="project-title">Prompt Relay: Inference-Time Temporal Prompt Routing For Multi-Event Video Generation</h3>
-                <p class="project-category">CVPR Workshop 2026 (Generative AI for Movie-Grade Video Production)</p>
+                <p class="project-authors"><span class="project-author project-author--owner">Gordon Chen</span>, <span class="project-author">Ziqi Huang</span>, <span class="project-author">Ziwei Liu</span></p>
 
               </a>
             </li>
@@ -361,9 +404,13 @@
         </section>
 
 
-        <section class="experience-carousel">
-          <div class="title-wrapper">
-            <h3 class="h3">Experience</h3>
+        <section class="experience-carousel" aria-labelledby="experience-title">
+          <div class="title-wrapper showcase-heading">
+            <div class="icon-box">
+              <ion-icon name="briefcase-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3" id="experience-title">Experience</h3>
           </div>
 
           <div class="carousel">
@@ -419,83 +466,58 @@
 
         <br>
 
-        <section class="timeline">
+        <section class="showcase-section" aria-labelledby="awards-title">
 
-          <div class="title-wrapper">
+          <div class="title-wrapper showcase-heading">
             <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
+              <ion-icon name="trophy-outline"></ion-icon>
             </div>
 
-            <h3 class="h3">Awards</h3>
+            <h3 class="h3" id="awards-title">Honors &amp; Awards</h3>
           </div>
 
-          <ol class="timeline-list">
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title" >Outstanding Teaching Assistant Award</h4>
-
-              <!-- <span>Nanyang Technological University</span> -->
-
+          <ol class="detail-list awards-list">
+            <li class="detail-card" style="--item-index: 0">
+              <span class="detail-index">01</span>
+              <h4 class="detail-title">Outstanding Teaching Assistant Award</h4>
+              <span class="detail-tag">Teaching</span>
             </li>
-
-             <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title" >NTU Outstanding (Achievement) Undergraduate Award</h4>
-
-              <!-- <span>Nanyang Technological University</span> -->
-
+            <li class="detail-card" style="--item-index: 1">
+              <span class="detail-index">02</span>
+              <h4 class="detail-title">NTU Outstanding Achievement Undergraduate Award</h4>
+              <span class="detail-tag">University</span>
             </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title" >2024 Global Undergraduate Awards Winner</h4>
-
-              <!-- <span>2024 Global Undergraduate Awards</span> -->
-
+            <li class="detail-card" style="--item-index: 2">
+              <span class="detail-index">03</span>
+              <h4 class="detail-title">2024 Global Undergraduate Awards Winner (Computer Science)</h4>
+              <span class="detail-tag">Global</span>
             </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">NTU President Research Scholar with Highest Distinction</h4>
-
-              <!-- <span>Nanyang Technological University</span> -->
-
+            <li class="detail-card" style="--item-index: 3">
+              <span class="detail-index">04</span>
+              <h4 class="detail-title">NTU President Research Scholar with Highest Distinction</h4>
+              <span class="detail-tag">Research</span>
             </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">NTU IET-cup International Collegiate Programming Competition Finalist</h4>
-
-              <!-- <span>Nanyang Technological University</span> -->
-
+            <li class="detail-card" style="--item-index: 4">
+              <span class="detail-index">05</span>
+              <h4 class="detail-title">NTU IET-cup International Collegiate Programming Competition Finalist</h4>
+              <span class="detail-tag">Competition</span>
             </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">NTU-Google Scholarship</h4>
-
-              <!-- <span>Nanyang Technological University</span> -->
-
+            <li class="detail-card" style="--item-index: 5">
+              <span class="detail-index">06</span>
+              <h4 class="detail-title">NTU-Google Scholarship</h4>
+              <span class="detail-tag">Scholarship</span>
             </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">AISHK Academic Scholar</h4>
-
-              <!-- <span>Australian International School</span> -->
-
+            <li class="detail-card" style="--item-index: 6">
+              <span class="detail-index">07</span>
+              <h4 class="detail-title">AISHK Academic Scholar</h4>
+              <span class="detail-tag">Academic</span>
             </li>
-
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Australian Problem Solving Mathematics Olympiad Winner (Gold) </h4>
-
+            <li class="detail-card" style="--item-index: 7">
+              <span class="detail-index">08</span>
+              <h4 class="detail-title">Australian Problem Solving Mathematics Olympiad Winner (Gold)</h4>
+              <span class="detail-tag">Olympiad</span>
             </li>
-
-
           </ol>
-
         </section>
 
 
@@ -504,51 +526,50 @@
              
 
 
-        <section class="timeline">
+        <section class="showcase-section" aria-labelledby="teaching-title">
 
-          <div class="title-wrapper">
+          <div class="title-wrapper showcase-heading">
             <div class="icon-box">
               <ion-icon name="book-outline"></ion-icon>
             </div>
 
-            <h3 class="h3">Teaching Assistantships</h3>
+            <h3 class="h3" id="teaching-title">Teaching Assistantships</h3>
           </div>
 
-          <ol class="timeline-list">
-
-
-          <li class="timeline-item">
-
-          <h4 class="h4 timeline-item-title">SC2300 Machine Learning (Turing AI Scholars Program), NTU, 2026 Spring</h4>
-
-
-          </li>
-
-          <li class="timeline-item">
-
-          <h4 class="h4 timeline-item-title">SC1007 Data Structures and Algorithms, NTU, 2026 Spring</h4>
-
-          </li>
-
-            
-          <li class="timeline-item">
-
-            <h4 class="h4 timeline-item-title">MH1300 Discrete Mathematics, NTU, 2024 Fall</h4>
-
-          </li>
-
-          <li class="timeline-item">
-
-            <h4 class="h4 timeline-item-title">MH1100 Calculus I, NTU, 2023 Spring</h4>
- 
-
-          </li>
-
-
-
-
+          <ol class="detail-list teaching-list">
+            <li class="detail-card" style="--item-index: 0">
+              <span class="course-code">SC2300</span>
+              <div class="detail-copy">
+                <h4 class="detail-title">Machine Learning</h4>
+                <p>Turing AI Scholars Program · NTU</p>
+              </div>
+              <time datetime="2026-01">Spring 2026</time>
+            </li>
+            <li class="detail-card" style="--item-index: 1">
+              <span class="course-code">SC1007</span>
+              <div class="detail-copy">
+                <h4 class="detail-title">Data Structures and Algorithms</h4>
+                <p>Nanyang Technological University</p>
+              </div>
+              <time datetime="2026-01">Spring 2026</time>
+            </li>
+            <li class="detail-card" style="--item-index: 2">
+              <span class="course-code">MH1300</span>
+              <div class="detail-copy">
+                <h4 class="detail-title">Discrete Mathematics</h4>
+                <p>Nanyang Technological University</p>
+              </div>
+              <time datetime="2024-08">Fall 2024</time>
+            </li>
+            <li class="detail-card" style="--item-index: 3">
+              <span class="course-code">MH1100</span>
+              <div class="detail-copy">
+                <h4 class="detail-title">Calculus I</h4>
+                <p>Nanyang Technological University</p>
+              </div>
+              <time datetime="2023-01">Spring 2023</time>
+            </li>
           </ol>
-
         </section>
 
 
