@@ -19,8 +19,8 @@
 
   --text-gradient-yellow: linear-gradient(
     to right, 
-    hsl(45, 100%, 72%), 
-    hsl(35, 100%, 68%)
+    hsl(38, 100%, 52%),
+    hsl(186, 73%, 38%)
   );
 
   /**
@@ -68,6 +68,7 @@
   --text-field-hover: hsla(0, 2%, 57%, 0.7);
   --outline: hsl(240, 13%, 89%);
   --background: hsl(0, 0%, 98%);
+  --panel-bg: hsla(0, 0%, 100%, 0.88);
   --icon: hsl(240, 8%, 95%);
   --text-box: hsl(0, 1%, 100%);
   --border-gradient: linear-gradient(
@@ -132,8 +133,44 @@ input, textarea {
 html { font-family: var(--ff-poppins); }
 
 body {
-  background: var(--background);
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+  isolation: isolate;
+  background:
+    linear-gradient(135deg, hsl(204, 100%, 99%) 0%, hsl(38, 100%, 98%) 48%, hsl(188, 44%, 97%) 100%);
   color: var(--text-color);
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+body::before {
+  background:
+    linear-gradient(115deg, hsla(38, 100%, 54%, 0.1), transparent 30%, hsla(188, 73%, 38%, 0.1) 68%, transparent),
+    repeating-linear-gradient(90deg, hsla(220, 16%, 70%, 0.12) 0 1px, transparent 1px 82px),
+    repeating-linear-gradient(0deg, hsla(220, 16%, 70%, 0.1) 0 1px, transparent 1px 82px);
+  background-position: 0 0, 0 0, 0 0;
+  opacity: 0.65;
+  animation: ambient-drift 24s ease-in-out infinite alternate;
+}
+
+body::after {
+  background:
+    linear-gradient(180deg, hsla(0, 0%, 100%, 0.72), transparent 28%),
+    linear-gradient(0deg, hsla(188, 73%, 38%, 0.07), transparent 42%);
+}
+
+@keyframes ambient-drift {
+  to {
+    background-position: 120px -60px, 40px 0, 0 40px;
+  }
 }
 
 
@@ -146,11 +183,13 @@ body {
 
 .sidebar,
 article {
-  background: var(--text-box);
+  background: var(--panel-bg);
   border: 1px solid var(--outline);
   border-radius: 20px;
   padding: 15px;
   box-shadow: var(--shadow-1);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
   z-index: 1;
 }
 
@@ -232,8 +271,25 @@ article.active {
   left: 0;
   width: 30px;
   height: 3px;
-  background: var(--text-gradient-yellow);
-  border-radius: 3px;
+  border-radius: 999px;
+  background:
+    linear-gradient(
+      90deg,
+      hsl(38, 100%, 52%) 0%,
+      hsl(44, 100%, 68%) 22%,
+      hsl(34, 100%, 56%) 46%,
+      hsl(48, 100%, 72%) 68%,
+      hsl(38, 100%, 52%) 100%
+    );
+  background-size: 240% 100%;
+  box-shadow: 0 0 12px hsla(38, 100%, 52%, 0.22);
+  animation: title-bar-flow 2.7s linear infinite;
+}
+
+@keyframes title-bar-flow {
+  to {
+    background-position: 240% 0;
+  }
 }
 
 .has-scrollbar::-webkit-scrollbar {
@@ -284,6 +340,8 @@ article.active {
 \*-----------------------------------*/
 
 main {
+  position: relative;
+  z-index: 1;
   margin: 15px 12px;
   margin-bottom: 30px;
   min-width: 259px;
@@ -362,6 +420,10 @@ main {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .article-title::after {
+    animation: none;
+  }
+
   .avatar-box,
   .avatar-box img {
     transition: none;
