@@ -109,8 +109,18 @@ if (awardsList) {
     );
   };
 
-  window.requestAnimationFrame(updateAwardsHeight);
+  const initializeAwardsList = () => {
+    awardsList.scrollTop = 0;
+    updateAwardsHeight();
+  };
+
+  window.requestAnimationFrame(() => {
+    window.requestAnimationFrame(initializeAwardsList);
+  });
   window.addEventListener('resize', updateAwardsHeight);
+  window.addEventListener('pageshow', () => {
+    window.requestAnimationFrame(initializeAwardsList);
+  });
   document.fonts?.ready.then(updateAwardsHeight);
 
   if ('ResizeObserver' in window) {

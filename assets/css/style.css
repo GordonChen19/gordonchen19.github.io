@@ -1706,6 +1706,8 @@ main {
 }
 
 .awards-list {
+  grid-auto-rows: max-content;
+  align-content: start;
   height: var(--awards-window-height, 350px);
   padding-right: 8px;
   overflow-y: auto;
@@ -1716,6 +1718,7 @@ main {
 }
 
 .awards-list .detail-card {
+  grid-template-columns: 42px minmax(0, 1fr);
   scroll-snap-align: start;
 }
 
@@ -1788,7 +1791,6 @@ main {
   overflow-wrap: anywhere;
 }
 
-.detail-tag,
 .teaching-list time {
   position: relative;
   z-index: 1;
@@ -1796,12 +1798,6 @@ main {
   font-size: 11px;
   font-weight: var(--fw-400);
   white-space: nowrap;
-}
-
-.detail-tag {
-  padding: 4px 9px;
-  border-radius: 999px;
-  background: hsla(35, 100%, 55%, 0.09);
 }
 
 .teaching-list .detail-card {
@@ -1851,7 +1847,6 @@ main {
     -webkit-overflow-scrolling: touch;
   }
 
-  .detail-tag,
   .teaching-list time {
     grid-column: 2;
     justify-self: start;
