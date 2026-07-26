@@ -94,9 +94,9 @@ const awardsList = document.querySelector('.awards-list');
 
 if (awardsList) {
   const visibleAwardCount = 5;
+  const visibleAwards = [...awardsList.children].slice(0, visibleAwardCount);
 
   const updateAwardsHeight = () => {
-    const visibleAwards = [...awardsList.children].slice(0, visibleAwardCount);
     const rowGap = Number.parseFloat(window.getComputedStyle(awardsList).rowGap) || 0;
     const visibleHeight = visibleAwards.reduce(
       (total, award) => total + award.getBoundingClientRect().height,
@@ -105,13 +105,18 @@ if (awardsList) {
 
     awardsList.style.setProperty(
       '--awards-window-height',
-      `${Math.ceil(visibleHeight)}px`,
+      `${Math.ceil(visibleHeight) + 4}px`,
     );
   };
 
   window.requestAnimationFrame(updateAwardsHeight);
   window.addEventListener('resize', updateAwardsHeight);
   document.fonts?.ready.then(updateAwardsHeight);
+
+  if ('ResizeObserver' in window) {
+    const awardsResizeObserver = new ResizeObserver(updateAwardsHeight);
+    visibleAwards.forEach((award) => awardsResizeObserver.observe(award));
+  }
 }
 
 const reduceScrollMotion = window.matchMedia('(prefers-reduced-motion: reduce)');

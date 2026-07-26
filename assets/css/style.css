@@ -1780,10 +1780,12 @@ main {
 }
 
 .detail-title {
+  min-width: 0;
   color: var(--text-color);
   font-size: var(--fs-6);
   font-weight: var(--fw-500);
   line-height: 1.45;
+  overflow-wrap: anywhere;
 }
 
 .detail-tag,
@@ -1840,7 +1842,13 @@ main {
   .teaching-list .detail-card {
     grid-template-columns: 58px minmax(0, 1fr);
     gap: 10px;
+    align-items: start;
     padding: 13px;
+  }
+
+  .awards-list {
+    padding-right: 4px;
+    -webkit-overflow-scrolling: touch;
   }
 
   .detail-tag,
