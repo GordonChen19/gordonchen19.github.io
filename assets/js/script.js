@@ -179,7 +179,7 @@ const sidebarBtn = document.querySelector('[data-sidebar-btn]');
 
 if (sidebar && sidebarBtn) {
   const syncSidebar = () => {
-    if (window.innerWidth >= 992) {
+    if (window.innerWidth >= 1250) {
       sidebar.classList.remove('active');
     }
   };
